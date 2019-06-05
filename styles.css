@@ -1,0 +1,457 @@
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* ==NAV BAR================================ */
+
+nav {
+    background-color: black;
+    color: white;
+    grid-column: 1 / 13;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.menuIcon {
+    display: none;
+}
+
+#dropDownMenu {
+    display: none;
+}
+
+.logo {
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navLinks {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.3vw;
+}
+
+.navLinks:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* ==BANNER================================ */
+
+.banner {
+    background-image: linear-gradient(black, rgba(0,0,0,0.9), rgba(0,0,0,0)), url(images/aperture-vintage-789541-unsplash.jpg);
+    grid-column: 1 / 13;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top: 50%;
+    position: relative;
+}
+
+.bannerImg2 {
+    position: absolute;
+    width: 55%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 10%;
+}
+
+.bannerText {
+    position: absolute;
+    color: white;
+    font-size: 3.1vw;
+    top: 35%;
+    left: 62%;
+    letter-spacing: 2px;
+}
+
+/* ==SUBHEADER============================ */
+
+.subHeader {
+    grid-column: 1 / 13;
+    font-size: 3.1vw;
+    text-align: center;
+}
+
+/* ==OPTION BOXES========================= */
+
+.options {
+    grid-column: 2 / 12;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-bottom: 5%;
+    height: 0;
+    padding-bottom: 48%;
+}
+
+.option1, .option2, .option3 {
+    height: 0;
+    padding-bottom: 48%;
+    padding-right: 32%;
+    position: relative;
+}
+
+.option1 {
+    margin-right: 2%;
+}
+
+.option1 > img, .option2 > img, .option3 > img {
+    position: absolute;
+    width: 100%;
+}
+
+.option3 {
+    margin-left: 2%;
+}
+
+h3 {
+    font-size: 2.4vw;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -42%);
+}
+
+/* ==OVERLAPPING PHOTOS ========================= */
+
+.overlappingImagesRow {
+    grid-column: 2 / 8;
+}
+
+.overlappingImagesContainer {
+    position: relative;
+    height: 0;
+    padding-bottom: 150%;
+    margin-right: 2%;
+}
+
+.bottomImg {
+    position: absolute;
+    width: 90%;
+    left: 0;
+    top: 0;
+}
+
+.topImg {
+    position: absolute;
+    width: 71%;
+    left: 30%;
+    bottom: 0;
+}
+
+/* ==ARTICLE========================= */
+
+.articleRow {
+    grid-column: 8 / 11;
+}
+
+.articleContainer {
+    margin-left: 2%;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr)
+}
+
+.articleText {
+    grid-row: 3 / 13;
+}
+
+.articleTitle {
+    font-size: 3.1vw;
+}
+
+.articleText > p {
+    line-height: 30px;
+}
+
+/* ==FOOTER========================= */
+
+footer {
+    grid-column: 1 / 13;
+    background-color: black;
+    margin-top: 5%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4%;
+}
+
+.nasaFooterTextContainer {
+    width: 40%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+}
+
+.nasaFooterTextContainer > p {
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.footerNavLinksContainer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 25%;
+    padding-right: 4%;
+    padding-left: 4%;
+    top: 0;
+}
+
+.footerLinks {
+    display: block;
+    line-height: 10px;
+}
+
+.footerLinks:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#footerNavHeader, #footerLinksHeader {
+    line-height: 30px;
+}
+
+#footerNavHeader:hover, #footerLinksHeader:hover {
+    color: inherit;
+    cursor: inherit;
+}
+
+.copyright {
+    margin-top: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.copyright > p {
+    display: inline;
+}
+
+.privacyPolicy {
+    font-weight: bold;
+    display: inline;
+    text-decoration: none;
+    color: gray;
+}
+
+/* ======================================== */
+/* ==MEDIA QUERIES========================= */
+/* ======================================== */
+
+@media only screen and (max-width: 1200px){
+
+    .navLinks {
+        font-size: 16px;
+    }
+
+    .articleText {
+        grid-row: 2 / 13;
+    }
+}
+
+@media only screen and (max-width: 1100px){ 
+    
+    .logo {
+        height: 23px;
+    }
+
+    .articleText {
+        grid-row: 1 / 13;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+    .articleText > p {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 900px){
+    
+    .articleRow {
+        grid-column: 2 / 12;
+        grid-row: 5 / 6;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .articleContainer {
+        margin-left: 0;
+    }
+    
+    .articleText > p {
+        padding-left: 20%;
+    }
+
+    .overlappingImagesRow {
+        grid-column: 2 / 12;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .overlappingImagesContainer {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+
+    .logo {
+        height: 20px;
+    }
+
+    .bannerText, .subHeader, .articleTitle {
+        font-size: 18px;
+    }
+
+    footer {
+        display: flex;
+        flex-flow: column;
+        padding: 4%;
+    }
+    
+    .nasaFooterTextContainer {
+        width: 90%;
+        padding: 6%;
+        padding-bottom: 0;
+    }
+    
+    .footerNavLinksContainer {
+        justify-content: flex-start;
+        width: 90%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .navigation {
+        padding-right: 40%;
+        padding-left: 6%;
+        padding-bottom: 15%;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+
+    nav {
+        justify-content: space-between;
+        padding: 10%;
+    }
+
+    .menuIcon {
+        display: inline-block;
+        height: 8vw;
+    }
+
+    .menuIcon:hover {
+        cursor: pointer;
+    }
+
+    #navBarMenu {
+        display: none;
+    }
+
+    #dropDownMenu {
+        position: absolute;
+        flex-flow: column;
+        z-index: 1;
+        top: 70px;
+        width: 100%;
+        height: 240px;
+        left: 0;
+        background-color: black;
+    }
+
+    .navLinks {
+        transform: translateX(35%)
+    }
+
+    .banner {
+        background-size: 125%;
+        padding-bottom: 30%;
+    }
+
+    .bannerImg2 {
+        width: 90%;
+        top: 0;
+        bottom: auto;
+        margin: 0;
+        left: 2%;
+    }
+    
+    .bannerText {
+        position: absolute;
+        color: white;
+        font-size: 8vw;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        letter-spacing: 2px;
+        transform: translateX(25%);
+    }
+
+    .subHeader {
+        font-size: 8vw;
+    }
+
+    .options {
+        grid-column: 1 / 13;
+        flex-flow: column;
+        justify-content: center;
+        margin-bottom: 5%;
+        height: auto;
+        padding-bottom: 0;
+    }
+    
+    .option1, .option2, .option3 {
+        height: auto; 
+        width: 100%;
+        padding-bottom: 0;
+        padding-right: 0;
+        position: relative;
+    }
+    
+    .option1 {
+        margin-right: 0;
+    }
+    
+    .option1 > img, .option2 > img, .option3 > img {
+        position: relative;
+        width: 100%;
+    }
+    
+    .option3 {
+        margin-left: 0;
+    }
+    
+    h3 {
+        font-size: 10vw;
+    }
+
+    .articleRow {
+        grid-column: 1 / 13;
+    }
+
+    .articleTitle {
+        font-size: 8vw;
+    }
+
+    .overlappingImagesRow {
+        grid-column: 1 / 13;
+    }
+
+}
